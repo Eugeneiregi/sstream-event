@@ -11,9 +11,9 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Sstream Events',
-  description: 'Sstream is a platform for event management.',
+  description: 'Sstream is your platform for event management...',
   icons: {
-    icon: '/assets/images/logo.svg'
+    icon: '/assets/images/logo.png'
   }
 }
 

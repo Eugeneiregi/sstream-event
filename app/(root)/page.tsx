@@ -3,15 +3,23 @@ import Link from 'next/link'
 import Image from "next/image"
 import Collection from "@/components/shared/Collection";
 import { getAllEvents } from "@/lib/actions/event.actions";
+import Search from "@/components/shared/Search";
+import { SearchParamProps } from "@/types";
+import CategoryFilter from "@/components/shared/CategoryFilter";
 
 
 
 
-export default async function Home() {
+export default async function Home({ searchParams }: SearchParamProps) {
+
+  const page = Number(searchParams?.page) || 1;
+  const searchText = (searchParams?.query as string) || '';
+  const category = (searchParams?.category as string) || '';
+
   const events = await getAllEvents({
-    query: '',
-    category: '',
-    page: 1,
+    query: searchText,
+    category,
+    page,
     limit: 6
   })
   // console.log(events)
@@ -26,25 +34,25 @@ export default async function Home() {
             <Button size="lg" asChild className="w-full m-5 md:w-fit lg:w-fit bg-black justify-center text-center items-center text-white hover:bg-yellow-400 rounded-full p-2">
 
               <Link href="#events">
-                <h2 className="text-center h3-bold">Explore and Buy !!!</h2>
+                <h2 className="text-center h3-bold p-2">Explore and Buy !!!</h2>
               </Link>
             </Button>
           </div>
 
           <Image
-            src="/assets/images/hero.png"
+            src="/assets/images/home.png"
             alt="hero"
             width={1000}
-            height={1000}
+            height={1100}
             className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
           />
         </div>
       </section>
       <section id="events" className="my-8 flex flex-col md:gap-12 gap-8 wrapper">
-        <h2 className="h2-bold">Events That you are Open to !!! ...</h2>
+        <h2 className="h2-bold">Sstream Events that are open !!! ...</h2>
         <div className="flex w-full flex-col gap-5 md:flex-row">
-          Search 
-          Category Filter
+          <Search /> 
+          <CategoryFilter />
         </div>
         <Collection 
           data={events?.data}
@@ -52,7 +60,7 @@ export default async function Home() {
           emptyStateSubtext="Come back later"
           collectionType="All_Events"
           limit={6}
-          page={1}
+          page={page}
           totalPages={events?.totalPages}
         />
       </section>

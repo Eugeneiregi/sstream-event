@@ -57,7 +57,7 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
       <SelectTrigger className="select-field items-center">
         <SelectValue className="text-center" placeholder="Category" />
       </SelectTrigger>
-      <SelectContent className="select-item flex flex-col bg-gray-200 p-regular-14">
+      <SelectContent className="select-item flex flex-col bg-gray-200 p-regular-14 hover:bg-none">
         {categories.length > 0 && categories.map((category) => (
           <SelectItem key={category._id} value={category._id} className="select-item p-regular-14">
             {category.name}
@@ -84,7 +84,7 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
               <Button
                 onClick={() => startTransition(handleAddCategory)}
                 variant="primary"
-                className="hover:bg-yellow-400 hover:border-green-600 hover:text-white rounded-full w-full justify-end"
+                className="hover:bg-yellow-400 p-2 hover:border-green-600 hover:text-white rounded-full w-full justify-end"
               >
                 Add
               </Button>
