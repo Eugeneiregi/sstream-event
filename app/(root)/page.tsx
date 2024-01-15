@@ -31,7 +31,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
           <div className="flex flex-col justify-center gap-8">
             <h1 className="h1-bold">Host, Connect, Create: Your Events,In Our Platform!</h1>
             <p className="p-regular-20 md:p-regular-24">Ssteam is an experienced Ticket Management System that help creators monetize their content</p>
-            <Button size="lg" asChild className="w-full m-5 md:w-fit lg:w-fit bg-black justify-center text-center items-center text-white hover:bg-yellow-400 rounded-full p-2">
+            <Button size="lg" asChild className="w-full md:w-fit lg:w-fit bg-black justify-center text-center items-center text-white hover:bg-yellow-400 rounded-full p-2">
 
               <Link href="#events">
                 <h2 className="text-center h3-bold p-2">Explore and Buy !!!</h2>
@@ -41,7 +41,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
 
           <Image
             src="/assets/images/home.png"
-            alt="hero"
+            alt="home"
             width={1000}
             height={1100}
             className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"

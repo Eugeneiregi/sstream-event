@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Sstream Events',
   description: 'Sstream is your platform for event management...',
   icons: {
-    icon: '/assets/images/logo.png'
+    icon: '/assets/icons/logo.png'
   }
 }
 
