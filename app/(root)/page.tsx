@@ -29,8 +29,8 @@ export default async function Home({ searchParams }: SearchParamProps) {
       <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
         <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
           <div className="flex flex-col justify-center gap-8">
-            <h1 className="h1-bold">Host, Connect, Create: Your Events, Our Platform!</h1>
-            <p className="p-regular-20 md:p-regular-24">Book and learn helpful tips from 3,168+ mentors in world-class companies with our global community.</p>
+            <h1 className="h1-bold">Host, Connect, Create: Your Events,In Our Platform!</h1>
+            <p className="p-regular-20 md:p-regular-24">Ssteam is an experienced Ticket Management System that help creators monetize their content</p>
             <Button size="lg" asChild className="w-full m-5 md:w-fit lg:w-fit bg-black justify-center text-center items-center text-white hover:bg-yellow-400 rounded-full p-2">
 
               <Link href="#events">
