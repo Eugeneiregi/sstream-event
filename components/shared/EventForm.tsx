@@ -344,7 +344,7 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                     size="lg"
                 >
                     {form.formState.isSubmitting ? (
-                        'Submitting'
+                        'Submitting... Kindly wait 1-2 min'
                     ) : `${type} Event`}
                 </Button>
             </form>

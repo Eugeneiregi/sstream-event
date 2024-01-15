@@ -43,7 +43,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
             src="/assets/images/home.png"
             alt="home"
             width={1000}
-            height={1100}
+            height={1000}
             className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
           />
         </div>
